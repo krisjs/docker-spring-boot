@@ -1,2 +1,2 @@
 # docker-spring-boot
-this is sample project
+this is sample spring boot project
