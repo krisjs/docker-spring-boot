@@ -20,9 +20,9 @@ phases:
       - echo Building the Docker image...
       - docker build -t springboot .
       - echo Tagging Docker image...
-      - docker tag springboot:latest 260624988989.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/springboot:latest
+      - docker tag springboot:latest 260624988989.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/springboot:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 260624988989.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/springboot:latest
+      - docker push 260624988989.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/springboot:$IMAGE_TAG
